@@ -19,7 +19,7 @@ class Member(models.Model):
     first_name = models.CharField(max_length=100)
     second_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
-    year_of_study = models.CharField(choices=YEAR_CHOICES,default="year of study")
+    year_of_study = models.CharField(choices=YEAR_CHOICES,default=1)
     class_name = models.CharField(max_length=50, choices=CLASS_CHOICES, default='Bible Scholars')
     registration_count = models.PositiveIntegerField(default=1)
 
