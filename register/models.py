@@ -6,6 +6,9 @@ class Member(models.Model):
         (2, '2'),
         (3, '3'),
         (4, '4'),
+        (5, 'Visitor'),
+        (6, 'Alumni'),
+        (7, 'Staff'),
     ]
     CLASS_CHOICES = [
         ('Vine branches', 'Vine branches'),
@@ -16,7 +19,7 @@ class Member(models.Model):
     first_name = models.CharField(max_length=100)
     second_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
-    year_of_study = models.IntegerField(choices=YEAR_CHOICES)
+    year_of_study = models.CharField(choices=YEAR_CHOICES,default="year of study")
     class_name = models.CharField(max_length=50, choices=CLASS_CHOICES, default='Bible Scholars')
     registration_count = models.PositiveIntegerField(default=1)
 
