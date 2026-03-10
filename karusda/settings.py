@@ -29,6 +29,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.render.com',
+]
+
 # Application 
 
 
@@ -88,8 +92,8 @@ WSGI_APPLICATION = 'karusda.wsgi.application'
 }'''
 
 DATABASES = {
-    "default": dj_database_url.parse(
-        "postgresql://karusda_user:AOpJUV0oJJAUsiIr86272kHGpKbroD7V@dpg-d6ni5v4r85hc73aeftug-a.oregon-postgres.render.com/karusda",
+    "default": dj_database_url.config(
+        default="postgresql://karusda_user:AOpJUV0oJJAUsiIr86272kHGpKbroD7V@dpg-d6ni5v4r85hc73aeftug-a.oregon-postgres.render.com/karusda",
         conn_max_age=600,
         ssl_require=True
     )
