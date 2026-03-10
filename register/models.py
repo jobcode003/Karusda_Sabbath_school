@@ -6,9 +6,9 @@ class Member(models.Model):
         ('2', '2'),
         ('3', '3'),
         ('4', '4'),
-        ('5', 'Visitor'),
-        ('6', 'Alumni'),
-        ('7', 'Staff'),
+        ('Visitor', 'Visitor'),
+        ('Alumni', 'Alumni'),
+        ('Staff', 'Staff'),
     ]
     CLASS_CHOICES = [
         ('Vine branches', 'Vine branches'),
